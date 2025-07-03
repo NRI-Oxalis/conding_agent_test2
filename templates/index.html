@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>〇×ゲーム (Tic-Tac-Toe)</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>〇×ゲーム</h1>
+        
+        <div class="game-info">
+            <div class="status" id="status">現在のターン: ○</div>
+            <button id="new-game-btn" onclick="startNewGame()">新しいゲーム</button>
+        </div>
+        
+        <div class="game-board" id="game-board">
+            <div class="cell" data-index="0" onclick="makeMove(0)"></div>
+            <div class="cell" data-index="1" onclick="makeMove(1)"></div>
+            <div class="cell" data-index="2" onclick="makeMove(2)"></div>
+            <div class="cell" data-index="3" onclick="makeMove(3)"></div>
+            <div class="cell" data-index="4" onclick="makeMove(4)"></div>
+            <div class="cell" data-index="5" onclick="makeMove(5)"></div>
+            <div class="cell" data-index="6" onclick="makeMove(6)"></div>
+            <div class="cell" data-index="7" onclick="makeMove(7)"></div>
+            <div class="cell" data-index="8" onclick="makeMove(8)"></div>
+        </div>
+        
+        <div class="game-rules">
+            <h3>ゲームのルール</h3>
+            <ul>
+                <li>3×3のマス目に○と×を交互に配置します</li>
+                <li>縦、横、斜めのいずれかに3つ並べると勝利です</li>
+                <li>○が先手、×が後手です</li>
+                <li>すべてのマスが埋まっても勝者が決まらない場合は引き分けです</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
